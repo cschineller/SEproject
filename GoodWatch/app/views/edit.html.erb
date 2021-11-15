@@ -1,0 +1,5 @@
+<h1>edit a show</h1>
+
+<%= form_with model: @show, url: show_path(@show), method: :patch, local: true do |form| %>
+  <%= render 'form_fields', form: form, submit_text: 'Update show' %>
+<% end %>  
