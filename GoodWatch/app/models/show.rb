@@ -1,6 +1,6 @@
 class Show < ApplicationRecord
   has_many :reviews
-  has_and_belongs_to_many :producers
+  has_and_belongs_to_many :studios
   has_many :review_authors, :through => :reviews
 
   validates :title, presence: true
