@@ -10,6 +10,11 @@ Gabe:
 Callie:
   -Started adding to the routes file
 
+Jake:
+  -Did the initial setup
+  -Debugged gems
+  -Got app up to heroku: https://obscure-wildwood-85273.herokuapp.com/ 
+
 What still needs to be done so far at the top of my mind is to  -Gabe
   1. Do the routes
   2. Debug my code
