@@ -1,35 +1,40 @@
-  <div class="index_header">
-    <h1>Testing Shows</h1>
-  </div>
-  <table class="table">
-    <thead class="thead-light">
-      <tr class="index_table_head">
-        <th>Title</th>
-        <th>Studio</th>
-        <th>Number of Seasons</th>
-        <th>Year</th>
-        <th>Number of Episodes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @shows.each do |s| %>
-        <tr class="shows">
-          <td class="showtitle">
-            <%= s.title%>
-          </td>
-          <td class="showstudio">
-            <%= s.studio %>
-          </td>
-          <td class="showseasons">
-            <%= s.number_of_seasons %>
-          </td>
-          <td class="showyear">
-            <%= s.year %>
-          </td>
-          <td class="showepisodes">
-            <%= s.episodes %>
-          </td>
+  <head>
+    <link rel="stylesheet" href="indexstyle.css" type= "text/css" />
+  </head>
+  <body>
+    <div class="index_header">
+      <h1>Testing Shows</h1>
+    </div>
+    <table class="table">
+      <thead class="thead-light">
+        <tr class="index_table_head">
+          <th>Title</th>
+          <th>Studio</th>
+          <th>Number of Seasons</th>
+          <th>Year</th>
+          <th>Number of Episodes</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <% @shows.each do |s| %>
+          <tr class="shows">
+            <td class="showtitle">
+              <%= s.title%>
+            </td>
+            <td class="showstudio">
+              <%= s.studio %>
+            </td>
+            <td class="showseasons">
+              <%= s.number_of_seasons %>
+            </td>
+            <td class="showyear">
+              <%= s.year %>
+            </td>
+            <td class="showepisodes">
+              <%= s.episodes %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </body>
