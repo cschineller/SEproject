@@ -4,6 +4,7 @@ class ShowsController < ApplicationController
         @shows = @shows.order(:title)
         searchfield = params[:title_search]
         @shows = @shows.where('title LIKE ?', "%#{searchfield}%") if !searchfield.nil?
+        byebug
       end
     
       def show
