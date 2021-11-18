@@ -14,7 +14,9 @@ ActiveRecord::Schema.define(version: 2021_11_18_203846) do
 
   create_table "shows", force: :cascade do |t|
     t.string "title"
-    t.integer "seasons"
+    t.string "studio"
+    t.integer "number_of_seasons"
+    t.integer "year"
     t.integer "episodes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
