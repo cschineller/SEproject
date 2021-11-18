@@ -19,6 +19,6 @@ Jake:
 
 What still needs to be done so far 
   1. Do the routes 
-  2. Debug my code
-  3. Seed the program
+  2. continue with migration files 
+  3. Debug
 
