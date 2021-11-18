@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_11_18_202156) do
 
   create_table "shows", force: :cascade do |t|
-    t.string "name"
+    t.string "title"
     t.integer "seasons"
     t.integer "episodes"
     t.datetime "created_at", precision: 6, null: false

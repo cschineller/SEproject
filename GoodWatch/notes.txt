@@ -18,7 +18,7 @@ Jake:
   -Got app up to heroku: https://obscure-wildwood-85273.herokuapp.com/ 
 
 What still needs to be done so far 
-  1. Do the routes
+  1. Do the routes 
   2. Debug my code
   3. Seed the program
 
