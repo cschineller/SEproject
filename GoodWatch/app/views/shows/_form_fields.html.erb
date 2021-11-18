@@ -1,0 +1,14 @@
+<% if @show.errors.any? %>
+<div class='alert alert-warning'>
+<%= pluralize(@show.errors.count, "error") %> prevented this book from being saved.
+</div>
+<% end %>
+<br>
+<%= form.label :name %>
+<%= form.text_field :name %>
+<% @show.errors[:name].each do |err| %>
+<span class='badge bg-warning'>Error: <%= @show.errors.where(:title).join(',') %></span>
+<% end %>
+
+<br>
+<%= form.submit submit_text %>
