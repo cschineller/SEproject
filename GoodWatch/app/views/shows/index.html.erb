@@ -1,36 +1,48 @@
-<head> 
-  <link rel="stylesheet" href="indexstyle.css" />
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <%= stylesheet_link_tag 'indexstyle' %>
+    <nav class="navbar">
+      <div class="navitem">
+        <%= link_to "GoodWatch", shows_path%>          
+      </div>
+      <div class="navitem">
+        <a>Browse</a>
+      </div>
+      <div class="searchbox navitem">
+        <%= form_with url: shows_path, local: true, method: :get do %>
+        <%= label_tag 'title_search' %>
+        <%= text_field_tag 'title_search', nil, maxlength: 20 %>
+        <%= submit_tag 'Search' %>
+        <% end %>
+      </div>
+      <div class="img">
+        <%= link_to (image_tag('plus.png')), new_show_path, class: "btn btn-danger" %>
+      </div>
+    </nav>
+  </head>
 
-<h1>All shows</h1>
+  <body>
+    <table class="table">
+      <tr>
+        <th>Title</th>
+        <th>Studio</th>
+        <th>Number of Seasons</th>
+        <th>Year</th>
+        <th>Episodes</th>
+      </tr>
 
-<div class="searchbox">
-  <%= form_with url: shows_path, local: true, method: :get do %>
-    <%= label_tag 'title_search' %>
-    <%= text_field_tag 'title_search', nil, maxlength: 20 %>
-    <%= submit_tag 'Search' %>
-  <% end %>
-</div>
-
-<table class="table">
-  <tr>
-    <th>Title</th>
-    <th>Studio</th>
-    <th>Number of Seasons</th>
-    <th>Year</th>
-    <th>Episodes</th>
-  </tr>
-
-  <% @shows.each do |show| %>
-    <tr>
-      <!--<td class='title'><%= link_to show.title, show_path(show) %></td>-->
-      <td><%= show.title %></td>
-      <td><%= show.studio %></td>
-      <td><%= show.number_of_seasons %></td>
-      <td><%= show.year %></td>
-      <td><%= book.episodes %></td>
-    </tr>
-  <% end %>
-</table>
-<br>
-<%= link_to "Create new show", new_show_path, class: "btn btn-danger" %>
+      <% @shows.each do |show| %>
+        <tr>
+          <!--<td class='title'><%= link_to show.title, show_path(show) %></td>-->
+          <td><%= show.title %></td>
+          <td><%= show.studio %></td>
+          <td><%= show.number_of_seasons %></td>
+          <td><%= show.year %></td>
+          <td><%= book.episodes %></td>
+        </tr>
+      <% end %>
+    </table>
+    <br>
+  </body>
+</html>
