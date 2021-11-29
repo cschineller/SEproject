@@ -3,10 +3,34 @@
 <h3><%= @show.title %></h3>
 <dl>
   <dt>Studio</dt><dd><%= @show.studio %></dd>
-  <dt>Year</dt><dd><%= @book.year %></dd>
-  <dt>Pages</dt><dd><%= @book.pages %></dd>
+  <dt>Year</dt><dd><%= @show.year %></dd>
   <dt>List Number of Seasons</dt><dd><%= @show.number_of_seasons %></dd>
 </dl>
+
+<table>
+  <thead class="thead-light">
+    <tr class="reviews_header">
+      <th>Stars</th>
+      <th>Review</th>
+      <th>Reviewer</th>
+    </tr>
+  <thead>
+  <tbody>
+    <%@show.reviews.each do |r|%>
+      <tr class="review">
+        <td class="reviewstars">
+          <%= r.stars %>
+        </td>
+        <td class="reviewtext">
+          <%= r.review %>
+        </td>
+        <td class="reviewer">
+          <%= r.review_author.name %>
+        </td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>
 
 <br>
 <%= link_to "Delete show", show_path(@show), method: :delete, class: "btn btn-danger" %>

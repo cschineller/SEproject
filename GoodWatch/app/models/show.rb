@@ -14,6 +14,10 @@ class Show < ApplicationRecord
     Show.where('title LIKE ?', "%#{query}%")
   end
 
+  def average_rating
+    reviews.average(:stars)
+  end
+
   private
 
 end
