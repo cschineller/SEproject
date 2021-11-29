@@ -11,11 +11,16 @@ h1{
     align-self: center;
 }
 
+#nav{
+    text-align: justify;
+    min-width: 500px;
+}
+
 .navitem {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     text-decoration: none;
 }
 
