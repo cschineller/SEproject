@@ -1,5 +1,5 @@
 FactoryBot.define do
-    factory :book do
+    factory :show do
         title { "title" }
         studio  { "self" }
         number_of_seasons { 6 }
