@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head> 
-    <%= stylesheet_link_tag 'indexstyle' %>
-    <nav class="navbar">
-      <div class="navitem">
-        <%= link_to "GoodWatch", shows_path%>          
-      </div>
-      <div class="navitem">
-        <a>Browse</a>
-      </div>
-      <div class="searchbox navitem">
-        <%= form_with url: shows_path, local: true, method: :get do %>
-        <%= label_tag 'title_search' %>
-        <%= text_field_tag 'title_search', nil, maxlength: 20 %>
-        <%= submit_tag 'Search' %>
-        <% end %>
-      </div>
-      <div class="img">
-        <%= link_to (image_tag('plus.png')), new_show_path, class: "btn btn-danger" %>
-      </div>
-    </nav>
-  </head>
-
+<header id="header">
+  <%= stylesheet_link_tag 'indexstyle' %>
+  <nav class="navbar">
+    <div class="navitem">
+      <%= link_to "GoodWatch", shows_path, class:"title" %>          
+    </div>
+    <div class="navitem">
+      <a class="text">
+        Browse
+      </a>
+    </div>
+    <div class="navitem">
+      <%= form_with url: shows_path, class:"text", local: true, method: :get do %>
+      <%= label_tag 'title_search' %>
+      <%= text_field_tag 'title_search', nil, maxlength: 20 %>
+      <%= submit_tag 'Search', class:"text"%>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to (image_tag('plus.png')), new_show_path, class: "img navitem" %>
+    </div>
+  </nav>
+</header>
   <body>
     <table class="table">
       <tr>

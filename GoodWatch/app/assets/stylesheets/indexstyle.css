@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap');
+
+header {
+    background-color: pink;
+}
+
 h1{
+    font-family: 'Outfit';
     font-size: 40pt;
     text-decoration: underline;
 }
@@ -9,22 +17,34 @@ h1{
     flex-direction: row;
     justify-content: center;
     align-self: center;
+    flex-wrap: wrap;
 }
 
-#nav{
+nav{
     text-align: justify;
-    min-width: 500px;
+}
+
+img{
+    max-width: 15%;
+    align-self: center;
 }
 
 .navitem {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    text-decoration: none;
+    padding: 2% 3%;
+    align-self: center;
 }
 
-img {
-    height: 10%;
-    width: auto;
+.title {
+    font-family: 'Abril Fatface';
+    font-size: 200%;
+    text-decoration: none;
+    color: black;
+}
+
+.text {
+    font-family: 'Outfit';
+    font-weight: 400;
 }
