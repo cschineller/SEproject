@@ -34,12 +34,13 @@ img{
     flex-direction: row;
     flex-wrap: wrap;
     padding: 2% 3%;
-    align-self: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
     font-family: 'Abril Fatface';
-    font-size: 200%;
+    font-size: 250%;
     text-decoration: none;
     color: black;
 }
@@ -47,4 +48,15 @@ img{
 .text {
     font-family: 'Outfit';
     font-weight: 400;
+    text-decoration: none;
+    color: black;
+    font-size: 120%;
+}
+
+.search-text {
+    font-family: 'Outfit';
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+    font-size: 90%;
 }

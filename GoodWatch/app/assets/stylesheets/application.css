@@ -13,4 +13,53 @@
  *= require_tree .
  *= require_self
  */
- 
+ @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap');
+
+nav {
+    background-color: pink;
+}
+
+h1{
+    font-family: 'Outfit';
+    font-size: 40pt;
+    text-decoration: underline;
+}
+
+.navbar {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+}
+
+nav{
+    text-align: justify;
+}
+
+img{
+    max-width: 15%;
+    align-self: center;
+}
+
+.navitem {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2% 3%;
+    align-self: center;
+}
+
+.title {
+    font-family: 'Abril Fatface';
+    font-size: 200%;
+    text-decoration: none;
+    color: black;
+}
+
+.text {
+    font-family: 'Outfit';
+    font-weight: 400;
+}
