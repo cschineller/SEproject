@@ -11,6 +11,9 @@ Gabe:
 
 Callie:
   -Started adding to the routes file
+  -Did styling to header (pink background is just temporary)
+  -Having issues getting the + button vertically centered (once we decide on a color I will adjust its color
+   and make the background transparent)
 
 Jake:
   -Did the initial setup
