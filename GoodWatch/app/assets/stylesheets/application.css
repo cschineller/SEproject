@@ -109,5 +109,5 @@ input {
 }
 
 input[type="submit" i] {
-    height: 50px;
+    height: auto;
 }
