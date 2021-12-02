@@ -1,14 +1,45 @@
 <% if @show.errors.any? %>
 <div class='alert alert-warning'>
-<%= pluralize(@show.errors.count, "error") %> prevented this book from being saved.
+<%= pluralize(@show.errors.count, "error") %> prevented this show from being saved.
 </div>
 <% end %>
+
 <br>
-<%= form.label :name %>
+
+<%= form.label :name, class:"text black field"%>
 <%= form.text_field :name %>
 <% @show.errors[:name].each do |err| %>
 <span class='badge bg-warning'>Error: <%= @show.errors.where(:title).join(',') %></span>
 <% end %>
 
 <br>
-<%= form.submit submit_text %>
+
+<%= form.label :studio, class:"text black field" %>
+<%= form.text_field :studio %>
+<% @show.errors[:studio].each do |err| %>
+<span class='badge bg-warning'>Error: <%= @show.errors[:studio].join(',') %></span>
+<% end %>
+
+<br>
+<%= form.label :number_of_seasons, class:"text black field" %>
+<%= form.number_field :number_of_seasons %>
+<% @show.errors[:number_of_seasons].each do |err| %>
+<span class='badge bg-warning'>Error: <%= @show.errors[:number_of_seasons].join(',') %></span>
+<% end %>
+
+<br>
+<%= form.label :year, class:"text black field" %>
+<%= form.number_field :year %>
+<% @show.errors[:year].each do |err| %>
+<span class='badge bg-warning'>Error: <%= @show.errors[:year].join(',') %></span>
+<% end %>
+
+<br>
+<%= form.label :episodes, class:"text black field" %>
+<%= form.number_field :episodes, step: -1.01 %>
+<% @show.errors[:episodes].each do |err| %>
+<span class='badge bg-warning'>Error: <%= @show.errors[:episodes].join(',') %></span>
+<% end %>
+
+
+<%= form.submit submit_text, class:"text black field"%>

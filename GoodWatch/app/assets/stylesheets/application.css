@@ -13,3 +13,101 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap');
+
+html {
+    background-color: #fefae0;
+}
+
+header {
+    background-color: #606c38;
+}
+
+h1{
+    font-family: 'Outfit';
+    font-size: 40pt;
+    text-decoration: underline;
+}
+
+.navbar {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+}
+
+nav{
+    text-align: justify;
+}
+
+img{
+    max-width: 40px;
+    align-self: center;
+}
+
+.navitem {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Abril Fatface';
+    font-size: 250%;
+    text-decoration: none;
+}
+
+.text {
+    font-family: 'Outfit';
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 120%;
+}
+
+.search-text {
+    font-family: 'Outfit';
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 90%;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.field {
+    line-height: 300%;
+    padding: 3%;
+}
+
+.white {
+    color: #fefae0;
+}
+
+.black {
+    color: #283618;
+}
+
+.green {
+    color: #606c38;
+}
+
+input {
+    height: 20px;
+}
+
+input[type="submit" i] {
+    height: auto;
+}
