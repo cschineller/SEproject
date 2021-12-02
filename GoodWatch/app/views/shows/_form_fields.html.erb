@@ -1,5 +1,5 @@
 <% if @show.errors.any? %>
-<div class='alert alert-warning'>
+<div class='alert alert-warning text green'>
 <%= pluralize(@show.errors.count, "error") %> prevented this show from being saved.
 </div>
 <% end %>
@@ -9,7 +9,7 @@
 <%= form.label :name, class:"text black field"%>
 <%= form.text_field :name %>
 <% @show.errors[:name].each do |err| %>
-<span class='badge bg-warning'>Error: <%= @show.errors.where(:title).join(',') %></span>
+<span class='badge bg-warning'>Error: <%= @show.errors.where(:name).join(',') %></span>
 <% end %>
 
 <br>

@@ -15,3 +15,7 @@ table {
     margin-top: -15px;
     margin-bottom: 20px;
 }
+
+.field {
+    height: auto;
+}
