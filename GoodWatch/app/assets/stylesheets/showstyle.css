@@ -1,0 +1,17 @@
+th {
+    text-align: right;
+    padding-right: 20px;
+}
+
+table {
+    margin-top: -30px;
+}
+
+.smaller {
+    font-size: smaller;
+}
+
+.less-space {
+    margin-top: -15px;
+    margin-bottom: 20px;
+}

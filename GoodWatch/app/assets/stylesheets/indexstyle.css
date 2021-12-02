@@ -31,6 +31,7 @@
     margin-left: 0.5%;
     margin-right: 0.5%;
     justify-self: center;
+    text-decoration: none;
   }
   .show:hover {
     background: #79b0f4; /*sets background colour*/

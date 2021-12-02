@@ -1,11 +1,34 @@
-<h1>Show details</h1>
+<%= stylesheet_link_tag 'showstyle', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div class="box">
+  <h1 class="title black"><%= @show.title %></h1>
 
-<h3><%= @show.title %></h3>
-<dl>
-  <dt>Studio</dt><dd><%= @show.studio %></dd>
-  <dt>Year</dt><dd><%= @show.year %></dd>
-  <dt>List Number of Seasons</dt><dd><%= @show.number_of_seasons %></dd>
-</dl>
+  <div class="less-space">
+  <%= link_to "Delete show", show_path(@show), method: :delete, class: "text black underline smaller" %>
+  <a class="text smaller black">
+    &nbsp | &nbsp
+  </a> 
+  <%= link_to 'Edit show details', edit_show_path(@show), class: 'text black underline smaller' %>
+  <a class="text smaller black">
+    &nbsp | &nbsp
+  </a> 
+  <%= link_to "Back to index", shows_path, class: "text black underline smaller"%>
+  </div>
+
+  <table class="text black field">
+    <tr>
+      <th>Studio:</th>
+      <td><%= @show.studio %></td>
+    </tr>
+    <tr>
+      <th>Year:</th>
+      <td><%= @show.year %></td>
+    </tr>
+    <tr>
+      <th>Number of seasons:</th>
+      <td><%= @show.number_of_seasons %></td>
+    </tr>
+  </table>
+</div>
 
 <table>
   <thead class="thead-light">
@@ -31,10 +54,3 @@
     <%end%>
   </tbody>
 </table>
-
-<br>
-<%= link_to "Delete show", show_path(@show), method: :delete, class: "btn btn-danger" %>
-<br>
-<%= link_to 'Edit show details', edit_show_path(@show), class: 'btn btn-secondary' %>
-<br>
-<%= link_to "Back to index", shows_path, class: "btn btn-primary"%>

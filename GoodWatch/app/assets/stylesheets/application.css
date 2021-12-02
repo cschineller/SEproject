@@ -14,7 +14,7 @@
  *= require_self
  */
 @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;900&display=swap');
 
 html {
     background-color: #fefae0;
@@ -110,4 +110,23 @@ input[type="submit" i] {
 
 .underline {
     text-decoration: underline;
+}
+
+.nounderline {
+    text-decoration: none;
+}
+
+h3 {
+    font-family: 'Outfit';
+    font-weight: 900;
+    font-size: 150%;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dl {
+    display: flex;
+    flex-direction: row;
 }

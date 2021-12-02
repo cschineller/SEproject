@@ -6,7 +6,9 @@
       <% @shows.each do |show| %>
         <tr>
           <!--<td class='title'><%= link_to show.title, show_path(show) %></td>-->
-          <span class="show text white"><%= show.title %></span>
+          <span class="show text white">
+            <%= link_to "#{show.title}", show_path(show), class:"text white nounderline" %>
+          </span>
         </tr>
       <% end %>
     </div>
