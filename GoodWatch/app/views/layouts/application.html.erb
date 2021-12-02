@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= javascript_include_tag 'application' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -46,7 +46,7 @@
           <a class="text white">
             &nbsp | &nbsp
           </a> 
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'text white'  %>
+          <%= link_to "Logout", destroy_user_session_path, local:true, method: :delete, :class => 'text white'  %>
         <% else %>
           <%= link_to "Sign up", new_user_registration_path, :class => 'text white'  %>
           <a class="text white">
