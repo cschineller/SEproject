@@ -1,50 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap');
 
-header {
-    background-color: pink;
-}
-
-h1{
-    font-family: 'Outfit';
-    font-size: 40pt;
-    text-decoration: underline;
-}
-
-.navbar {
-    position: sticky;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-self: center;
-    flex-wrap: wrap;
-}
-
-nav{
-    text-align: justify;
-}
-
-img{
-    max-width: 15%;
-    align-self: center;
-}
-
-.navitem {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 2% 3%;
-    align-self: center;
-}
 
 .title {
     font-family: 'Abril Fatface';
-    font-size: 200%;
-    text-decoration: none;
-    color: black;
+    font-size: 250%;
+    text-decoration: underline;
 }
 
 .text {
     font-family: 'Outfit';
     font-weight: 400;
+    text-decoration: none;
+    font-size: 120%;
 }
+
+
+.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px; /*sets height of element*/
+    background: #6591c8; /*sets the background of this element (here a solid colour)*/
+    transition: all 0.6s; /*sets a transition (for hover effect)*/
+    padding-left: 3%; /*sets 'padding'*/
+    padding-right: 3%; /*sets 'padding'*/
+    max-width: 100px;
+    line-height: 150%; /*for this, it sets vertical alignment*/
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    justify-self: center;
+  }
+  .show:hover {
+    background: #79b0f4; /*sets background colour*/
+  }
+  .table {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0.1% 0.1%;
+    justify-content: left;
+    align-items: center;
+  }

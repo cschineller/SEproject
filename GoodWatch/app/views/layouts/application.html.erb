@@ -9,7 +9,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <header>
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>
@@ -17,17 +17,46 @@
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
 
-    <p class="navbar-text float-right">
-    <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-    <% end %>
-    </p>
-
-    <%= yield %>
-  </body>
+    <nav class="navbar">
+      <div class="navitem">
+        <%= link_to "GoodWatch", shows_path, class:"title white" %>          
+      </div>
+      <div class="navitem">
+        <a class="text white">
+          Browse
+        </a>
+      </div>
+      <div class="navitem">
+        <%= form_with url: shows_path, class:"text white", local: true, method: :get do %>
+        <%= label_tag 'title_search' %>
+        <%= text_field_tag 'title_search', nil, maxlength: 20 %>
+        <%= submit_tag 'Search', class:"search-text green"%>
+        <% end %>
+      </div>
+      <div class="navitem">
+        <%= link_to (image_tag('plus.png')), new_show_path, class: "img" %>
+      </div>
+      <div class="navitem">
+        <% if user_signed_in?%>
+          <a class="text white">Logged in as <strong><%= current_user.email %></strong>.</a>
+          <a class="text white">
+            &nbsp &nbsp
+          </a> 
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'text white' %>
+          <a class="text white">
+            &nbsp | &nbsp
+          </a> 
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'text white'  %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path, :class => 'text white'  %>
+          <a class="text white">
+            &nbsp | &nbsp
+          </a>
+          <%= link_to "Login", new_user_session_path, :class => 'text white'  %>
+        <% end %>
+      </div>
+  </nav>
+    
+  </header>
+  <%= yield %>
 </html>
