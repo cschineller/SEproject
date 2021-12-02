@@ -19,7 +19,7 @@
 
     <nav class="navbar">
       <div class="navitem">
-        <%= link_to "GoodWatch", shows_path, class:"title white" %>          
+        <%= link_to "GoodWatch", shows_path, class:"title white underline" %>          
       </div>
       <div class="navitem">
         <%= form_with url: shows_path, class:"text white", local: true, method: :get do %>
@@ -38,16 +38,16 @@
             &nbsp &nbsp
           </a> 
           <%= link_to 'Edit profile', edit_user_registration_path, :class => 'text white' %>
-          <a class="text white">
+          <a class="text white underline">
             &nbsp | &nbsp
           </a> 
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'text white'  %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'text white underline'  %>
         <% else %>
-          <%= link_to "Sign up", new_user_registration_path, :class => 'text white'  %>
+          <%= link_to "Sign up", new_user_registration_path, :class => 'text white underline'  %>
           <a class="text white">
             &nbsp | &nbsp
           </a>
-          <%= link_to "Login", new_user_session_path, :class => 'text white'  %>
+          <%= link_to "Login", new_user_session_path, :class => 'text white underline'  %>
         <% end %>
       </div>
   </nav>

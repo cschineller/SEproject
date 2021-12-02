@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap');
 
 html {
@@ -27,7 +27,6 @@ header {
 h1{
     font-family: 'Outfit';
     font-size: 40pt;
-    text-decoration: underline;
 }
 
 .navbar {
@@ -63,20 +62,17 @@ img{
 .title {
     font-family: 'Abril Fatface';
     font-size: 250%;
-    text-decoration: none;
 }
 
 .text {
     font-family: 'Outfit';
     font-weight: 400;
-    text-decoration: none;
     font-size: 120%;
 }
 
 .search-text {
     font-family: 'Outfit';
     font-weight: 400;
-    text-decoration: none;
     font-size: 90%;
 }
 
@@ -110,4 +106,8 @@ input {
 
 input[type="submit" i] {
     height: auto;
+}
+
+.underline {
+    text-decoration: underline;
 }

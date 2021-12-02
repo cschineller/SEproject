@@ -5,13 +5,11 @@
 .title {
     font-family: 'Abril Fatface';
     font-size: 250%;
-    text-decoration: underline;
 }
 
 .text {
     font-family: 'Outfit';
     font-weight: 400;
-    text-decoration: none;
     font-size: 120%;
 }
 
