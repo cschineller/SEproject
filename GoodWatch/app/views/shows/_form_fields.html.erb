@@ -28,7 +28,7 @@
 <% end %>
 
 <br>
-<%= form.label :year, class:"text black field" %>
+<%= form.label :starting_year, class:"text black field" %>
 <%= form.number_field :year %>
 <% @show.errors[:year].each do |err| %>
 <span class='badge bg-warning text green'>Error: <%= @show.errors[:year].join(',') %></span>

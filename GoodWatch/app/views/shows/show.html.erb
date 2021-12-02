@@ -24,37 +24,41 @@
       <td><%= @show.creator %></td>
     </tr>
     <tr>
-      <th>Year:</th>
+      <th>Starting year:</th>
       <td><%= @show.year %></td>
     </tr>
     <tr>
       <th>Number of seasons:</th>
       <td><%= @show.number_of_seasons %></td>
     </tr>
+    <tr>
+      <th>Number of episodes:</th>
+      <td><%= @show.episodes %></td>
+    </tr>
   </table>
-</div>
 
-<table>
+
+<table class="text black field">
   <thead class="thead-light">
     <tr class="reviews_header">
+      <th>Reviewer</th>
       <th>Stars</th>
       <th>Review</th>
-      <th>Reviewer</th>
     </tr>
   <thead>
   <tbody>
     <%@show.reviews.each do |r|%>
-      <tr class="review">
+        <td class="reviewer">
+          <%= r.review_author.name %>
+        </td>
         <td class="reviewstars">
           <%= r.stars %>
         </td>
         <td class="reviewtext">
           <%= r.review %>
         </td>
-        <td class="reviewer">
-          <%= r.review_author.name %>
-        </td>
       </tr>
     <%end%>
   </tbody>
 </table>
+</div>
