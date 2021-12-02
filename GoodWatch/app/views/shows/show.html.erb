@@ -2,17 +2,23 @@
 <div class="box">
   <h1 class="title black"><%= @show.title %></h1>
 
-  <div class="less-space">
-  <%= link_to "Delete show", show_path(@show), method: :delete, class: "text black underline smaller" %>
-  <a class="text smaller black">
-    &nbsp | &nbsp
-  </a> 
-  <%= link_to 'Edit show details', edit_show_path(@show), class: 'text black underline smaller' %>
-  <a class="text smaller black">
-    &nbsp | &nbsp
-  </a> 
-  <%= link_to "Back to index", shows_path, class: "text black underline smaller"%>
-  </div>
+  <% if user_signed_in? %>
+    <div class="less-space">
+    <%= link_to "Delete show", show_path(@show), method: :delete, class: "text black underline smaller" %>
+    <a class="text smaller black">
+      &nbsp | &nbsp
+    </a> 
+    <%= link_to 'Edit show details', edit_show_path(@show), class: 'text black underline smaller' %>
+    <a class="text smaller black">
+      &nbsp | &nbsp
+    </a> 
+    <%= link_to "Back to index", shows_path, class: "text black underline smaller"%>
+    </div>
+    <div>
+      <%= link_to "Write a review", new_review_path, :class => "text black underline smaller" %>
+    </div>
+  <% end %>
+
 
   <table class="text black field">
     <tr>
@@ -38,27 +44,27 @@
   </table>
 
 
-<table class="text black field">
-  <thead class="thead-light">
-    <tr class="reviews_header">
-      <th>Reviewer</th>
-      <th>Stars</th>
-      <th>Review</th>
-    </tr>
-  <thead>
-  <tbody>
-    <%@show.reviews.each do |r|%>
-        <td class="reviewer">
-          <%= r.review_author.name %>
-        </td>
-        <td class="reviewstars">
-          <%= r.stars %>
-        </td>
-        <td class="reviewtext">
-          <%= r.review %>
-        </td>
+  <table class="text black field">
+    <thead class="thead-light">
+      <tr class="reviews_header">
+        <th>Reviewer</th>
+        <th>Stars</th>
+        <th>Review</th>
       </tr>
-    <%end%>
-  </tbody>
-</table>
+    <thead>
+    <tbody>
+      <%@show.reviews.each do |r|%>
+          <td class="reviewer">
+            <%= r.review_author.name %>
+          </td>
+          <td class="reviewstars">
+            <%= r.stars %>
+          </td>
+          <td class="reviewtext">
+            <%= r.review %>
+          </td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
 </div>
