@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<%= stylesheet_link_tag 'indexstyle', media: 'all', 'data-turbolinks-track': 'reload' %>
   <body>
     <div class="table">
       <% @shows.each do |show| %>
         <tr>
           <!--<td class='title'><%= link_to show.title, show_path(show) %></td>-->
-          <a class="show"><%= show.title %></a>
+          <span class="show text white"><%= show.title %></span>
         </tr>
       <% end %>
     </div>

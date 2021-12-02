@@ -1,4 +1,10 @@
-<h1>create a show </h1>
-<%= form_with model: @show, url: shows_path, method: :post, local: true do |form| %>
-  <%= render 'form_fields', form: form, submit_text: 'Create show' %>
-<% end %>     
+<div class="box">
+  <div>
+    <h1 class="title black">Create a Show </h1>
+  </div>
+  <div>
+    <%= form_with model: @show, url: shows_path, method: :post, local: true do |form| %>
+      <%= render 'form_fields', form: form, submit_text: 'Create show' %>
+    <% end %> 
+  </div>
+</div>    

@@ -16,8 +16,12 @@
  @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap');
 
-nav {
-    background-color: pink;
+html {
+    background-color: #fefae0;
+}
+
+header {
+    background-color: #606c38;
 }
 
 h1{
@@ -40,7 +44,7 @@ nav{
 }
 
 img{
-    max-width: 15%;
+    max-width: 40px;
     align-self: center;
 }
 
@@ -48,18 +52,62 @@ img{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 2% 3%;
-    align-self: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
     font-family: 'Abril Fatface';
-    font-size: 200%;
+    font-size: 250%;
     text-decoration: none;
-    color: black;
 }
 
 .text {
     font-family: 'Outfit';
     font-weight: 400;
+    text-decoration: none;
+    font-size: 120%;
+}
+
+.search-text {
+    font-family: 'Outfit';
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 90%;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.field {
+    line-height: 300%;
+    padding: 3%;
+}
+
+.white {
+    color: #fefae0;
+}
+
+.black {
+    color: #283618;
+}
+
+.green {
+    color: #606c38;
+}
+
+input {
+    height: 20px;
+}
+
+input[type="submit" i] {
+    height: 50px;
 }
