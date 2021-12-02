@@ -32,9 +32,22 @@
   </tbody>
 </table>
 
-<br>
-<%= link_to "Delete show", show_path(@show), method: :delete, class: "btn btn-danger" %>
-<br>
-<%= link_to 'Edit show details', edit_show_path(@show), class: 'btn btn-secondary' %>
+<div class="row">
+  <div class="col-md">
+    <% if user_signed_in? %>
+      <%= link_to "Write a review", new_review_path, :class => "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md">
+    <% if user_signed_in? %>
+      <%= link_to "Delete show", show_path(@show), method: :delete, class: "btn btn-danger" %>
+      <%= link_to 'Edit show details', edit_show_path(@show), class: 'btn btn-secondary' %>
+    <% end %>
+  </div>
+</div>
+
 <br>
 <%= link_to "Back to index", shows_path, class: "btn btn-primary"%>
