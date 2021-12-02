@@ -53,7 +53,7 @@ class ShowsController < ApplicationController
       private
     
       def create_update_params
-        params.require(:show).permit(:title, :studio, :number_of_seasons, :year, :episodes)
+        params.require(:show).permit(:title, :creator, :number_of_seasons, :year, :episodes)
       end
     
       def record_not_found

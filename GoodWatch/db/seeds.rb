@@ -11,10 +11,10 @@ User.create!(:email => 'admins@colgate.edu', :admin => true, :password => "colga
 u1 = User.create!(:email => 'ggrossman18@colgate.edu', :admin => false, :password => 'colgate13')
 
 #Seeded TV Shows
-b1 = Show.create!(title: "Community", studio: "Dan Harmon", number_of_seasons: 6, year: 2009, episodes: 110)
-b2 = Show.create!(title: "Ozark", studio: "Bill Dubuque", number_of_seasons: 4, year: 2017, episodes: 30)
-b3 = Show.create!(title: "The Wire", studio: "David Simon", number_of_seasons: 5, year: 2002, episodes: 60)
-b4 = Show.create!(title: "Stranger Things", studio: "Duffer Brothers", number_of_seasons: 3, year: 2016, episodes: 25)
+b1 = Show.create!(title: "Community", creator: "Dan Harmon", number_of_seasons: 6, year: 2009, episodes: 110)
+b2 = Show.create!(title: "Ozark", creator: "Bill Dubuque", number_of_seasons: 4, year: 2017, episodes: 30)
+b3 = Show.create!(title: "The Wire", creator: "David Simon", number_of_seasons: 5, year: 2002, episodes: 60)
+b4 = Show.create!(title: "Stranger Things", creator: "Duffer Brothers", number_of_seasons: 3, year: 2016, episodes: 25)
 
 #Seeded Review Authors
 ra1 = ReviewAuthor.create!(name: 'Bad Review 1', user_id: u1.id)

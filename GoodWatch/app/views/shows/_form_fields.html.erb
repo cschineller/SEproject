@@ -6,39 +6,39 @@
 
 <br>
 
-<%= form.label :name, class:"text black field"%>
-<%= form.text_field :name %>
-<% @show.errors[:name].each do |err| %>
-<span class='badge bg-warning'>Error: <%= @show.errors.where(:name).join(',') %></span>
+<%= form.label :title, class:"text black field"%>
+<%= form.text_field :title %>
+<% @show.errors[:title].each do |err| %>
+<span class='badge bg-warning text green'>Error: <%= @show.errors.where(:title).join(',') %></span>
 <% end %>
 
 <br>
 
-<%= form.label :studio, class:"text black field" %>
-<%= form.text_field :studio %>
-<% @show.errors[:studio].each do |err| %>
-<span class='badge bg-warning'>Error: <%= @show.errors[:studio].join(',') %></span>
+<%= form.label :creator, class:"text black field" %>
+<%= form.text_field :creator %>
+<% @show.errors[:creator].each do |err| %>
+<span class='badge bg-warning text green'>Error: <%= @show.errors[:creator].join(',') %></span>
 <% end %>
 
 <br>
 <%= form.label :number_of_seasons, class:"text black field" %>
 <%= form.number_field :number_of_seasons %>
 <% @show.errors[:number_of_seasons].each do |err| %>
-<span class='badge bg-warning'>Error: <%= @show.errors[:number_of_seasons].join(',') %></span>
+<span class='badge bg-warning text green'>Error: <%= @show.errors[:number_of_seasons].join(',') %></span>
 <% end %>
 
 <br>
 <%= form.label :year, class:"text black field" %>
 <%= form.number_field :year %>
 <% @show.errors[:year].each do |err| %>
-<span class='badge bg-warning'>Error: <%= @show.errors[:year].join(',') %></span>
+<span class='badge bg-warning text green'>Error: <%= @show.errors[:year].join(',') %></span>
 <% end %>
 
 <br>
 <%= form.label :episodes, class:"text black field" %>
 <%= form.number_field :episodes, step: -1.01 %>
 <% @show.errors[:episodes].each do |err| %>
-<span class='badge bg-warning'>Error: <%= @show.errors[:episodes].join(',') %></span>
+<span class='badge bg-warning text'>Error: <%= @show.errors[:episodes].join(',') %></span>
 <% end %>
 
 
