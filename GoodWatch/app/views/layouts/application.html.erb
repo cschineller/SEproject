@@ -22,11 +22,6 @@
         <%= link_to "GoodWatch", shows_path, class:"title white" %>          
       </div>
       <div class="navitem">
-        <a class="text white">
-          Browse
-        </a>
-      </div>
-      <div class="navitem">
         <%= form_with url: shows_path, class:"text white", local: true, method: :get do %>
         <%= label_tag 'title_search' %>
         <%= text_field_tag 'title_search', nil, maxlength: 20 %>
