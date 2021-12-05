@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2021_11_18_211749) do
 
   create_table "shows", force: :cascade do |t|
     t.string "title"
-    t.string "studio"
+    t.string "creator"
     t.integer "number_of_seasons"
     t.integer "year"
     t.integer "episodes"
