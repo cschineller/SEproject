@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   #get 'reviews/create'
-  post '/products/:id/reviews', to 'reviews#create', as: :create_review
+  #post '/products/:id/reviews', to 'reviews#create', as: :create_review
+  resources :reviews # <-- placeholder, we have to fix the above line
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :shows #[:index, :show, :new, :edit, :create, :update, :destroy]
