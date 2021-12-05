@@ -21,7 +21,6 @@ Jake:
   -Got app up to heroku: https://obscure-wildwood-85273.herokuapp.com/ 
 
 What still needs to be done so far 
-  1. Do the routes 
-  2. continue with migration files 
-  3. Debug
+  1. There is a lot more that needs to be done, but one easy thing is that I did half of the crud_spec
+  tests, and created a framework for someone else to finish it if they don't know what else to do.
 
