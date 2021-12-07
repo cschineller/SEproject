@@ -3,7 +3,8 @@
   <h1 class="title black"><%= @show.title %></h1>
 
   <% if user_signed_in? %>
-    <div class="less-space">
+  <div class="less-space">
+  <% if current_user.admin == true%>
     <%= link_to "Delete show", show_path(@show), method: :delete, class: "text black underline smaller" %>
     <a class="text smaller black">
       &nbsp | &nbsp
@@ -12,6 +13,7 @@
     <a class="text smaller black">
       &nbsp | &nbsp
     </a> 
+    <% end %>
     <%= link_to "Back to index", shows_path, class: "text black underline smaller"%>
     </div>
     <div>
