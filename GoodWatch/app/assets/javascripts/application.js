@@ -12,3 +12,7 @@
 //
 //= require rails-ujs
 //= require_tree .
+
+$(function(){
+    $('.flash').fadeOut(4000);  //Disappears over 4 seconds
+  });

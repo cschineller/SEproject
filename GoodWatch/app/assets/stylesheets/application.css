@@ -133,6 +133,14 @@ dl {
 
 .notice {
     text-align: center;
-    line-height: 300%;
-    padding: 3%;
+}
+
+.alert {
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    background-color: #606c38;
+    color: #fefae0;
+    margin: 1px;
+    font-size: 200%;
 }

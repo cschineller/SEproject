@@ -8,10 +8,12 @@
     <%= javascript_include_tag 'application' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <header>
-
     <nav class="navbar">
+    <% if alert %>
+      <p class="alert alert-danger text alert"><%= alert %></p>
+      <%= flash[:alert] = nil %>
+  <% end %>
       <div class="navitem">
         <%= link_to "GoodWatch", shows_path, class:"title white underline" %>          
       </div>
@@ -32,7 +34,7 @@
             &nbsp &nbsp
           </a> 
           <%= link_to 'Edit profile', edit_user_registration_path, :class => 'text white' %>
-          <a class="text white underline">
+          <a class="text white">
             &nbsp | &nbsp
           </a> 
           <%= link_to "Logout", destroy_user_session_path, local:true, method: :delete, :class => 'text white'  %>
@@ -47,10 +49,9 @@
   </nav>
     
   </header>
-  <% if !flash[:notice].nil?%>
-    <div class="text notice">
-      <%= flash[:notice] %>
+    <% if notice %>
+      <p class="alert alert-success text notice"><%= notice %></p>
       <%= flash[:notice] = nil %>
-  <% end %>
+    <% end %>
   <%= yield %>
 </html>
