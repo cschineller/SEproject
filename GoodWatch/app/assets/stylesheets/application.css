@@ -130,3 +130,9 @@ dl {
     display: flex;
     flex-direction: row;
 }
+
+.notice {
+    text-align: center;
+    line-height: 300%;
+    padding: 3%;
+}

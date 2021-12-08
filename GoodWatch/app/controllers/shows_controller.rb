@@ -4,6 +4,9 @@ class ShowsController < ApplicationController
         @shows = @shows.order(:title)
         searchfield = params[:title_search]
         @shows = @shows.where('title LIKE ?', "%#{searchfield}%") if !searchfield.nil?
+        if @shows.empty?
+          flash[:notice] = "No shows exist by that name"
+        end
       end
     
       def show
@@ -49,7 +52,7 @@ class ShowsController < ApplicationController
           render 'edit'
         end
       end
-    
+
       private
     
       def create_update_params

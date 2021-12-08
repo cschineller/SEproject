@@ -47,5 +47,10 @@
   </nav>
     
   </header>
+  <% if !flash[:notice].nil?%>
+    <div class="text notice">
+      <%= flash[:notice] %>
+      <%= flash[:notice] = nil %>
+  <% end %>
   <%= yield %>
 </html>
