@@ -17,7 +17,7 @@
     <%= link_to "Back to index", shows_path, class: "text black underline smaller"%>
     </div>
     <div>
-      <%= link_to "Write a review", new_show_review_path(@show), :class => "text black underline smaller" %>
+      <%= link_to "Write a review", create_review_path, class: "text black underline smaller" %>
     </div>
   <% end %>
 
@@ -46,7 +46,7 @@
   </table>
 
 
-  <table class="text black field">
+  <table class="text black field" id="reviewtable">
     <thead class="thead-light">
       <tr class="reviews_header">
         <th>Reviewer</th>
@@ -55,18 +55,35 @@
       </tr>
     <thead>
     <tbody>
-      <%@show.reviews.each do |r|%>
-          <td class="reviewer">
-            <%= r.review_author.name %>
-          </td>
-          <td class="reviewstars">
-            <%= r.stars %>
-          </td>
-          <td class="reviewtext">
-            <%= r.review %>
-          </td>
-        </tr>
-      <%end%>
+      <% @show.reviews.each do |review| %>
+        <%= render :partial => "review", locals: {review: review} %>
+      <% end %>
     </tbody>
   </table>
+
+  <% if user_signed_in? %>
+    <%= form_with(id: :reviewform, model: @review, url: create_review_path, local: false) do |f| %>
+      <div class="row">
+       <div class="col-md-4">
+          <%= f.label :stars %>
+        </div>
+        <div class="col-md-4">
+        <%= f.number_field :stars, in: 1..5 %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <%= f.label :review %>
+        </div>
+        <div class="col-md-4">
+          <%= f.text_area :review %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <%= f.submit "Add review" %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
 </div>

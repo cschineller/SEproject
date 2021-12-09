@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   #get 'reviews/create'
-  #post '/products/:id/reviews', to 'reviews#create', as: :create_review
+  post '/show/:id/reviews', to: 'reviews#create', as: :create_review
   
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :shows do #[:index, :show, :new, :edit, :create, :update, :destroy]
-    resources :reviews, only: [:new, :create] # <-- placeholder, we have to fix the above line
-  end
+  resources :shows #do #[:index, :show, :new, :edit, :create, :update, :destroy]
+    #resources :reviews, only: [:new, :create] # <-- placeholder, we have to fix the above line
+  #end
   root to: 'shows#index'
 
   #CRUD routes linking HTML path to shows_controller

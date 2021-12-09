@@ -1,27 +1,31 @@
 class ReviewsController < ApplicationController
   before_action :user_signed_in?
 
+  def show
+    Review.new(params)
+  end
+
   def create
-    if Product.where(params[:id].to_i).exists?()
+    if Show.where(params[:id]).exists?()
       @review = Review.new(review_params)
-      @review.product = Product.find(params[:id])
-      @review.user = current_user
+      @review.show = Show.find(params[:id])
+      @review.review_author_id = current_user
       respond_to do |format|
         if @review.save
-          format.html { redirect_to product_path, notice: "Review posted!" }
+          format.html { redirect_to show_path, notice: "Review posted!" }
           format.js
         else
-          redirect_to(product_path, alert: "Failed to save review") and return
+          redirect_to(show_path, alert: "Failed to save review") and return
         end
       end
     else
-      redirect_to(product_path, alert: "Failed to save review") and return
+      redirect_to(show_path, alert: "Failed to save review") and return
     end
   end
 
   private
 
   def review_params
-    params.require(:review).permit(:stars, :review)
+    params.permit(:stars, :review)
   end
 end
