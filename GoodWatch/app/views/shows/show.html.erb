@@ -16,9 +16,6 @@
     <% end %>
     <%= link_to "Back to index", shows_path, class: "text black underline smaller"%>
     </div>
-    <div>
-      <%= link_to "Write a review", create_review_path, class: "text black underline smaller" %>
-    </div>
   <% end %>
 
 
@@ -62,6 +59,7 @@
   </table>
 
   <% if user_signed_in? %>
+    <%= 'Add a review:'%>
     <%= form_with(id: :reviewform, model: @review, url: create_review_path, local: false) do |f| %>
       <div class="row">
        <div class="col-md-4">

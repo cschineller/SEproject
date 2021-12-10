@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   resources :shows #do #[:index, :show, :new, :edit, :create, :update, :destroy]
     #resources :reviews, only: [:new, :create] # <-- placeholder, we have to fix the above line
   #end
+  resources :review_authors, only: [:new, :create]
   root to: 'shows#index'
-
+  
   #CRUD routes linking HTML path to shows_controller
   # get '/shows', to: 'shows#index'
   # get '/shows/:id', to: 'shows#show'
